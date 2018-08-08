@@ -21,5 +21,24 @@
     "deprecated_since_zapp_sdk": "",
     "unsupported_since_zapp_sdk": "",
     "react_native": false,
-    "custom_configuration_fields": [{}]
+    "custom_configuration_fields": [
+        {
+          "type": "text",
+          "key": "SampleTextParameter",
+          "tooltip_text": "Sample Text parameter that will be available in the plugin configuration",
+          "default": "sample-text"
+        },
+        {
+          "type": "checkbox",
+          "key": "SampleTextBoolean",
+          "tooltip_text": "Sample text boolean that will be available in the plugin configuration",
+          "default": 0
+        },
+        {
+          "type": "colorpicker",
+          "key": "SampleColor",
+          "tooltip_text": "Sample color that will be available in the plugin configuration",
+          "default": "FFFFFFFF"
+        }
+    ]    
 }

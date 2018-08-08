@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
                     'SWIFT_VERSION' => '4.1'
                   }
                   
-    s.default_subspec = 'Core'
+    s.default_subspec = '___PACKAGENAME___'
                   
   end
   

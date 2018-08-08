@@ -1,39 +1,45 @@
 //
 //  ViewController.swift
-//  ___PACKAGENAME___
+//  ZappGeneralPluginExample-iOS
 //
-//  Created by ___FULLUSERNAME___ on ___DATE___.
-//  ___COPYRIGHT___
+//  Created by Liviu Romascanu on 28/06/2018.
+//  Copyright © 2018 Applicaster. All rights reserved.
 //
 
 import UIKit
-import ZappPlugins
-import ApplicasterSDK
+import ___PACKAGENAME___Plugin
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-        
-    }
-
+    @IBOutlet weak var configurationTextField: UITextField!
+    @IBOutlet weak var parametersTextField: UITextField!
+    var sampleGeneralPlugin: SampleGeneralPlugin?
     
-    @IBAction func buttonPlay_clicked() {
-        self.presentPlayer()
+    @IBAction func initializePluginClicked(_ sender: Any) {
+        if let data = configurationTextField.text?.data(using: String.Encoding.utf8),
+            let configuration = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+            sampleGeneralPlugin = SampleGeneralPlugin(configurationJSON: configuration)
+        } else {
+            let alert = UIAlertController(title: nil, message: "Please enter a valid json in the configuration field", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
-    func presentPlayer() {
-        let item:ZPPlayable = APURLPlayable(streamURL: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", name: "Test Video", description: "")
-        let pluggablePlayer = ZPPlayerManager.sharedInstance.create(playableItem: item)
-        pluggablePlayer.presentPlayerFullScreen?(self, configuration: nil) {
-            pluggablePlayer.pluggablePlayerPlay(nil)
+    @IBAction func handleURLSchemeClicked(_ sender: Any) {
+        if let sampleGeneralPlugin = sampleGeneralPlugin {
+            if let data = parametersTextField.text?.data(using: String.Encoding.utf8),
+                let params = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary,
+                let dictionaryParams = params {
+                sampleGeneralPlugin.handleUrlScheme(dictionaryParams)
+            } else {
+                let alert = UIAlertController(title: nil, message: "Please enter a valid json in the configuration field", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        } else {
+            let alert = UIAlertController(title: nil, message: "Please first initialize a plugin", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }
