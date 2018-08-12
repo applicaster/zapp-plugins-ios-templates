@@ -7,7 +7,7 @@ source 'git@github.com:applicaster/PluginsBuilderCocoaPods.git'
 source 'git@github.com:CocoaPods/Specs.git'
 
 target '___PACKAGENAME___' do
-    pod '___PACKAGENAME___', :path => '___PACKAGENAME___.podspec'
+    pod '___PACKAGENAME___Plugin', :path => '___PACKAGENAME___.podspec'
 end
 
 post_install do |installer|
