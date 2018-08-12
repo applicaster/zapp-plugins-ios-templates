@@ -72,7 +72,7 @@
 	<array>
 		<string>../Podfile</string>
 		<string>../___PACKAGENAME___.podspec</string>
-		<string>../PluginClasses/___PACKAGENAME___Plugin.swift</string>
+		<string>../PluginClasses/Zapp___PACKAGENAME___Adapter.swift</string>
 		<string>ViewController.swift</string>
 		<string>Base.lproj/Main.storyboard</string>
 		<string>plugin_configurations.json</string>
@@ -90,7 +90,7 @@
                 <key>Path</key>
                 <string>ViewController.swift</string>
             </dict>
-		<key>../PluginClasses/___PACKAGENAME___Plugin.swift</key>
+		<key>../PluginClasses/Zapp___PACKAGENAME___Adapter.swift</key>
             <dict>
 				<key>TargetIndices</key>
 				<array/>
@@ -99,7 +99,7 @@
     				<string>PluginClasses</string>
   				</array>
                 <key>Path</key>
-                <string>PluginClasses/___PACKAGENAME___Plugin.swift</string>
+                <string>PluginClasses/Zapp___PACKAGENAME___Adapter.swift</string>
             </dict>
         <key>../Podfile</key>
             <dict>

@@ -7,17 +7,17 @@
 //
 
 import UIKit
-import ___PACKAGENAME___Plugin
+import Zapp___PACKAGENAME___Adapter
 
 class ViewController: UIViewController {
     @IBOutlet weak var configurationTextField: UITextField!
     @IBOutlet weak var parametersTextField: UITextField!
-    var myPlugin: ___PACKAGENAME___Plugin?
+    var myPlugin: Zapp___PACKAGENAME___Adapter?
     
     @IBAction func initializePluginClicked(_ sender: Any) {
         if let data = configurationTextField.text?.data(using: String.Encoding.utf8),
             let configuration = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
-            myPlugin = ___PACKAGENAME___Plugin(configurationJSON: configuration)
+            myPlugin = Zapp___PACKAGENAME___Adapter(configurationJSON: configuration)
         } else {
             let alert = UIAlertController(title: nil, message: "Please enter a valid json in the configuration field", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

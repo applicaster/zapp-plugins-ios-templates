@@ -1,5 +1,5 @@
 //
-//  ___PACKAGENAME___Plugin
+//  Zapp___PACKAGENAME___Adapter
 //  ___PACKAGENAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
@@ -9,7 +9,7 @@
 import Foundation
 import ZappPlugins
 
-@objc public class ___PACKAGENAME___Plugin: ZPGeneralBaseProvider, ZPAppLoadingHookProtocol {
+@objc public class Zapp___PACKAGENAME___Adapter: ZPGeneralBaseProvider, ZPAppLoadingHookProtocol {
     /**
         Implement this method if you need the plugin to run code/APIs on the application launching time.
         In case you are implementing the executeOnLaunch method please make sure that you are also declare that on the plugin_manifest.json.
