@@ -2,7 +2,7 @@
 
 This repository includes Xcode Templates that help you quickly set up new Plugins for Applicaster Zapp platform.
 
-Installing the templates will enable you to chose the plugin type in the Xcode "new project" screen. After selecting the plugin type, you will need to provide few general details on the plugin. Then, it will generate a new plugin project that includes the deployment files, like `podspec`  and the `plugin_manifest.json, and the plugin class itself including the relevant Zapp protocol.
+Installing the templates will enable you to chose the plugin type in the Xcode "new project" screen. After selecting the plugin type, you will need to provide few general details on the plugin. Then, it will generate a new plugin project that includes the deployment files, like `podspec`  and the `plugin_manifest.json`, and the plugin class itself including the relevant Zapp protocol.
 
 #### Environment requirements
 Please follow the environment requirements in the [Zapp developer documentation](https://developer-zapp.applicaster.com/dev-env/iOS.html).
@@ -14,6 +14,7 @@ Open your terminal and run: `git clone https://github.com/applicaster/zapp-plugi
 
 #### How to update
 Move to the templates folder by: `cd ~/Library/Developer/Xcode/Templates/Applicaster`.
+
 Then, pull the latest updates by: `git pull origin master`.
 
 ## Open an issue
