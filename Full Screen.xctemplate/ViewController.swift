@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Zapp___PACKAGENAME___Adapter
+import ___PACKAGENAME___Plugin
 
 class ViewController: UIViewController {
     @IBOutlet weak var configurationTextField: UITextField!
