@@ -6,23 +6,18 @@ Pod::Spec.new do |s|
     s.description      = <<-DESC
     An Example of full screen plugin for Zapp iOS.
                          DESC
-    s.homepage         = "https://github.com/applicaster/___PACKAGENAME___"
+    s.homepage         = "___VARIABLE_giturl___"
     s.license          = 'MIT'
     s.author           = { "___FULLUSERNAME___" => "___VARIABLE_autherEmail___" }
-    s.source           = { :git => "git@github.com:applicaster/___PACKAGENAME___", :tag => s.version.to_s }
+    s.source           = { :git => "___VARIABLE_giturl___", :tag => s.version.to_s }
   
     s.ios.deployment_target  = "9.0"
     s.platform     = :ios, '9.0'
     s.requires_arc = true
     s.swift_version = '4.1'
-
-    s.resources = [
-                    "___PACKAGENAME___/**/*.xcassets",
-                    "___PACKAGENAME___/**/*.storyboard",
-                    "___PACKAGENAME___/**/*.xib",
-                    "___PACKAGENAME___/**/*.png"]
-  
+   
     s.subspec 'Core' do |c|
+      s.resources = []
       c.frameworks = 'UIKit'
       c.source_files = 'PluginClasses/*.{swift,h,m}'
       c.dependency 'ZappPlugins'
@@ -36,7 +31,7 @@ Pod::Spec.new do |s|
                     'SWIFT_VERSION' => '4.1'
                   }
                   
-    s.default_subspec = '___PACKAGENAME___'
+    s.default_subspec = 'Core'
                   
   end
   

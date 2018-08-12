@@ -9,7 +9,18 @@
 import Foundation
 import ZappPlugins
 
-public class ___PACKAGENAME___Plugin: ZPGeneralBaseProvider {
+@objc public class ___PACKAGENAME___Plugin: ZPGeneralBaseProvider, ZPAppLoadingHookProtocol {
+    /**
+        Implement this method if you need the plugin to run code/APIs on the application launching time.
+        In case you are implementing the executeOnLaunch method please make sure that you are also declare that on the plugin_manifest.json.
+        You can do that by setting the "require_startup_execution" to true.
+
+        The application lifecycle will wait until you call the completion.
+    */
+    @objc public func executeOnLaunch(completion: (() -> Void)?) {
+        completion?()
+    
+    }
     
     /**
         Implement this method if you need the plugin to respond to a URL scheme.
