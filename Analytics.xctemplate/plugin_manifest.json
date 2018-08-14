@@ -11,7 +11,7 @@
     "manifest_version": "1.0.4",
     "name": "___PACKAGENAME___",
     "description": "___VARIABLE_description___",
-    "type": "player",
+    "type": "analytics",
     "identifier": "___VARIABLE_identifier___",
     "ui_builder_support": true,
     "dependency_name": "___PACKAGENAME___",

@@ -11,10 +11,10 @@ import ZappPlugins
 import ApplicasterSDK
 
 /**
- This Template contains protocol methods to be implemented according to your needs
- Some of the method can be removed if they are not relevant for your implementation
- You Can also add methods from the protocol, for more information about the availble methods, please check ZPAnalyticsProviderProtocol
- **/
+This Template contains protocol methods to be implemented according to your needs.
+Some of the methods can be removed if they are not relevant for your implementation.
+You can also add methods from the protocol, for more information about the available methods, please check ZPAnalyticsProviderProtocol under ZappPlugins.
+**/
 
 public class ___PACKAGENAME___Plugin: ZPAnalyticsProvider {
     
@@ -23,8 +23,8 @@ public class ___PACKAGENAME___Plugin: ZPAnalyticsProvider {
     }
     
     /**
-     Configures the provider, here is where the analytics provider should be set up
-     You can access the custom config passed in the plugin_manifest by accessing self.providedProperties
+     Configures the provider, here is where the analytics provider should be set up.
+     You can access the custom config passed in the plugin_manifest by accessing self.providedProperties.
     */
     public override func configureProvider() -> Bool {
         return super.configureProvider()
