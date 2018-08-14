@@ -16,20 +16,26 @@ import ApplicasterSDK
  You Can also add methods from the protocol, for more information about the availble methods, please check ZPAnalyticsProviderProtocol
  **/
 
-public class CleverTapAnalyticsPlugin: ZPAnalyticsProvider {
+public class ___PACKAGENAME___Plugin: ZPAnalyticsProvider {
     
     public override func createAnalyticsProvider(_ allProvidersSetting: [String : NSObject]) -> Bool {
         return super.createAnalyticsProvider(allProvidersSetting)
     }
     
+    /**
+     Configures the provider, here is where the analytics provider should be set up
+     You can access the custom config passed in the plugin_manifest by accessing self.providedProperties
+    */
     public override func configureProvider() -> Bool {
         return super.configureProvider()
     }
     
+    // Returns the provider key
     public override func getKey() -> String {
         return ""
     }
     
+    //MARK: Track event Functions
     public override func trackEvent(_ eventName: String, parameters: [String : NSObject], completion: ((Bool, String?) -> Void)?) {
         //TODO
     }
@@ -50,12 +56,13 @@ public class CleverTapAnalyticsPlugin: ZPAnalyticsProvider {
         trackEvent(eventName, parameters: parameters, completion: nil)
     }
     
-    public required init(configurationJSON: NSDictionary?) {
-        super.init(configurationJSON: configurationJSON)
-    }
+    //MARK: Push Notification Token
     
-    required public init() {
-        fatalError("init() has not been implemented")
+    /**
+     sets the Push Notification deviceToken
+     */
+    open override func setPushNotificationDeviceToken(_ deviceToken: Data) {
+        super.setPushNotificationDeviceToken(deviceToken)
     }
     
 }
