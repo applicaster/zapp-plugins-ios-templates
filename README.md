@@ -4,7 +4,7 @@ This repository includes Xcode Templates that help you quickly set up new Plugin
 
 Installing the templates will enable you to chose the plugin type in the Xcode "new project" screen. After selecting the plugin type, you will need to provide few general details on the plugin. Then, it will generate a new plugin project that includes the deployment files, like `podspec`  and the `plugin_manifest.json`, and the plugin class itself including the relevant Zapp protocol.
 
-![Xcode New Project](/XcodeTemplates.png =400x)
+<img src="/XcodeTemplates.png" alt="Xcode New Project" width="400px"/>
 
 #### Environment requirements
 Please follow the environment requirements in the [Zapp developer documentation](https://developer-zapp.applicaster.com/dev-env/iOS.html).
