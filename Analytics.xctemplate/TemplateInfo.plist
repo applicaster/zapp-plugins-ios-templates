@@ -75,9 +75,22 @@
 		<string>../PluginClasses/___PACKAGENAME___Plugin.swift</string>
 		<string>plugin_configurations.json</string>
 		<string>plugin_manifest.json</string>
+		<string>ViewController.swift</string>
+		<string>Base.lproj/Main.storyboard</string>
+
 	</array>
 	<key>Definitions</key>
 	<dict>
+		<key>Base.lproj/Main.storyboard</key>
+        <dict>
+            <key>Path</key>
+            <string>Base.lproj/Main.storyboard</string>
+        </dict>
+		<key>ViewController.swift</key>
+        <dict>
+            <key>Path</key>
+            <string>ViewController.swift</string>
+        </dict>
 		<key>../PluginClasses/___PACKAGENAME___Plugin.swift</key>
 		<dict>
 			<key>TargetIndices</key>
