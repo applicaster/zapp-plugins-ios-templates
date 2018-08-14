@@ -1,0 +1,21 @@
+[{
+	"plugin": {
+		"api": {
+			"class_name": "___PACKAGENAME___.___PACKAGENAME___Plugin"
+		},
+		"author_name": "___FULLUSERNAME___",
+		"author_email": "___VARIABLE_autherEmail___",
+		"manifest_version": "0.0.1",
+		"name": "___PACKAGENAME___",
+		"description": "___VARIABLE_description___",
+		"identifier": "___VARIABLE_identifier___",
+		"type": "analytics",
+		"platform": "ios",
+		"min_zapp_sdk": "7.0.0",
+		"whitelisted_account_ids": [],
+		"dependency_repository_url": [],
+		"dependency_name": "",
+		"dependency_version": ""
+	},
+	"configuration_json": {}
+}]
