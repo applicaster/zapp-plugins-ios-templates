@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-    s.name             = "___PACKAGENAME___"
+    s.name             = "___PACKAGENAME___Plugin"
     s.version          = '0.0.1'
     s.summary          = "___PACKAGENAME___ analytics plugin for Zapp iOS."
     s.description      = <<-DESC
