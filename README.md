@@ -22,18 +22,21 @@ Move to the templates folder by: `cd ~/Library/Developer/Xcode/Templates/Applica
 Then, pull the latest updates by: `git pull origin master`.
 
 ## How to use
-Open your Xcode and start a new project. You will get the "Choose a template for your new project" screen. Scroll to the bottom, and you will see the Applicaster templates that added to your local Xcode. Choose the one of them.
+Open your Xcode and start a new project, you will get the "Choose a template for your new project" screen.
+Scroll to the bottom, and you will see the Applicaster templates that added to your local Xcode.
+Choose one of them.
 
-Now you will need to add some general details on our plugin. 
+Now you will need to add some general details on your plugin in addition to the defualt Xcode fields, for example:
+* The "Plugin Auther Email".
+* The "Product Name" will set the project and the plugin name (remember that the name needs to be the same in the iOS and the Android plugin versions).
+* The "Plugin Description" will be shown to the Zapp users, make sure you writing something that people could understand what this plugin is all about.
+* The "Plugin Identifier", the id of this plugin in Zapp, also this needs to be the same for all platforms.
+* The "Plugin Git URL", the URL of the plugin Git repository.
 
-The "Product Name" will set the project and the plugin name (remember that the name needs to be the same in the iOS and the Android plugin versions).
-
-The "Plugin Description" will be shown to the Zapp users, make sure you writing something that people could understand what this plugin is all about.
-
-The "Plugin Identifier", the id of this plugin in Zapp, also this needs to be the same for all platforms.
-
-At this point, the primary project was created. Now, we will need to close the Xcode and open the terminal in the project folder. 
-Run `pod update`. This will add the new plugin from the local folder and also the relevant Zapp frameworks. After the pods' installation finished, let's open the `MyPlugin.xcworkspace`.
+At this point, the primary project was created. 
+Now, you will need to close the Xcode and open the terminal in the project folder. 
+Run `pod update`, this will add the new plugin from the local folder and also the relevant Zapp frameworks. 
+After the pods' installation finished, you can open the `MyPlugin.xcworkspace` start coding :tada:.
 
 ## Open an issue
 In any case of a bug, feature request or a question don't hesitate to [open an issue here at GitHub](https://github.com/applicaster/zapp-plugins-ios-templates/issues/new/choose).
