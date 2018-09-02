@@ -3,11 +3,10 @@
 //  ZappAnalyticsPluginExample-iOS
 //
 //  Created by Javier Casaudoumecq on 8/8/18.
-//  Copyright © 2018 Javier Casaudoumecq. All rights reserved.
+//  Copyright © 2018 Applicaster LTD. All rights reserved.
 //
 
 import UIKit
-import ZappPlugins
 import ApplicasterSDK
 import ___PACKAGENAME___Plugin
 
