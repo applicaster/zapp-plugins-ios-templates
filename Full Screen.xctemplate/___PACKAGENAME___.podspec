@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
       s.resources = []
       c.frameworks = 'UIKit'
       c.source_files = 'PluginClasses/*.{swift,h,m}'
+      c.dependency 'ZappGeneralPluginsSDK'
       c.dependency 'ZappPlugins'
     end
                   

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ZappGeneralPluginsSDK
 import ZappPlugins
 
 @objc public class Zapp___PACKAGENAME___Adapter: ZPGeneralBaseProvider, ZPAppLoadingHookProtocol {
