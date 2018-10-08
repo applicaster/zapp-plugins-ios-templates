@@ -8,7 +8,7 @@ source 'git@github.com:CocoaPods/Specs.git'
 
 target '___PACKAGENAME___' do
     pod '___PACKAGENAME___Plugin', :path => '___PACKAGENAME___.podspec'
-    pod 'ApplicasterSDK', '~> 7.2.0'
+    pod 'ApplicasterSDK', '~> 7.3.0'
 end
 
 post_install do |installer|
