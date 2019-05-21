@@ -1,4 +1,4 @@
-platform :ios, '9.0'
+platform :ios, '10.0'
 use_frameworks!
 install! 'cocoapods', :deterministic_uuids => false
 
@@ -8,13 +8,13 @@ source 'git@github.com:CocoaPods/Specs.git'
 
 target '___PACKAGENAME___' do
     pod '___PACKAGENAME___Plugin', :path => '___PACKAGENAME___.podspec'
-    pod 'ApplicasterSDK', '~> 7.3.0'
+    pod 'ApplicasterSDK'
 end
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '4.1'
+            config.build_settings['SWIFT_VERSION'] = '4.2'
         end
     end
 end
