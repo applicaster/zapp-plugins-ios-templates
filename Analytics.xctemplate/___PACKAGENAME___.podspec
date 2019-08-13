@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target  = "10.0"
     s.platform     = :ios, '10.0'
     s.requires_arc = true
-    s.swift_version = '4.2'
+    s.swift_version = '5.0'
 
     s.subspec 'Core' do |c|
       s.resources = []
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                     'OTHER_LDFLAGS' => '$(inherited)',
                     'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
                     'LIBRARY_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}"/**',
-                    'SWIFT_VERSION' => '4.2'
+                    'SWIFT_VERSION' => '5.0'
                   }
                   
     s.default_subspec = 'Core'
